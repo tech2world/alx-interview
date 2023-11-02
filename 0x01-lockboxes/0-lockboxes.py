@@ -49,7 +49,7 @@ def canUnlockAll(boxes):
     # If we run out of keys and haven't visited all boxes, return False.
     return all(visited)
 
-# # Test cases
+# Test cases
 # boxes1 = [[1], [2], [3], [4], []]
 # print(canUnlockAll(boxes1))  # Should return True
 
@@ -58,3 +58,31 @@ def canUnlockAll(boxes):
 
 # boxes3 = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
 # print(canUnlockAll(boxes3))  # Should return False
+# boxes_random = [
+#     [7, 5],
+#     [1, 10, 7],
+#     [9, 6, 10],
+#     [7, 9],
+#     [2],
+#     [7, 3],
+#     [7, 9, 10, 10, 8, 9, 2, 5],
+#     [7, 2, 2, 4, 4, 2, 4, 8, 7],
+#     [4, 2, 9, 6, 6, 5, 5],
+# ]
+# print(canUnlockAll(boxes_random))  # Expected: False (result may vary depending on specific arrangement)
+
+# boxes_complex = [
+#     [10, 3, 8, 9, 6, 5, 8, 1],
+#     [8, 5, 3, 7, 1, 8, 6],
+#     [5, 1, 9, 1],
+#     [],
+#     [6, 6, 9, 4, 3, 2, 3, 8, 5],
+#     [9, 4],
+#     [4, 2, 5, 1, 1, 6, 4, 5, 6],
+#     [9, 5, 8, 8],
+#     [6, 2, 8, 6]
+# ]
+# print(canUnlockAll(boxes_complex))  # Expected: True
+
+boxes_1000 = [[] for _ in range(1000)]  # Create 1000 empty boxes
+print(canUnlockAll(boxes_1000))  # Expected: True
