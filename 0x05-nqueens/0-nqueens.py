@@ -17,6 +17,7 @@ You are only allowed to import the sys module
 
 import sys
 
+
 def is_safe(board, row, col, n):
     """
     Check if it's safe to place a queen at a specific position on the board.
@@ -32,6 +33,7 @@ def is_safe(board, row, col, n):
         if board[i][j] == 1:
             return False
     return True
+
 
 def nqueens(board, col, n, solutions):
     """
@@ -56,6 +58,7 @@ def nqueens(board, col, n, solutions):
 
     return res
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
@@ -74,8 +77,6 @@ if __name__ == "__main__":
     board = [[0 for j in range(n)] for i in range(n)]
     solutions = []
     nqueens(board, 0, n, solutions)
-
-    solutions.sort()
 
     for solution in solutions:
         print(solution)
